@@ -2,17 +2,41 @@
 <html>
 <head>
   <title>Аудиозаписи и их расшифровки</title>
+   mark {
+    background: rgb(211,181,233);
+    padding: 0 5px;
+   }
+   [data-tooltip] {
+    position: relative;
+   }
+   [data-tooltip]::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    width: 300px;
+    left: 0; top: 0;
+    background: rgb(211,181,233);
+    color: black;
+    padding: 0.5em;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    pointer-events: none;
+    opacity: 0;
+    transition: 1s;
+   }
+   [data-tooltip]:hover::after {
+    opacity: 1;
+    top: 2em;
+   }
 </head>
 <body data-gr-c-s-loaded="true">
-  <p align="center"><b><font face="Helvetica Neue" size="+1">Аудиозаписи и их расшифровки</font></b></p>
-  <p align="center"><font face="Helvetica Neue">Напомним, что в каждый набор включалось два филлера и один контрольный текст.</font></p>
-  <p align="center"><font face="Helvetica Neue">Всего было <em>шесть текстов</em> по два (филлер и контрольный) на каждую из возрастных групп.</font></p>
+  <div align="center"><h1><font face="Helvetica Neue">Аудиозаписи и их расшифровки</font></h1></div>
+  <p align="center"><font face="Helvetica Neue">Напомним, что в каждый набор включалось два филлера и один контрольный текст. Всего было шесть текстов, по два (филлер и контрольный) на каждую из возрастных групп.</font></p>
+<p align="center"><font face="Helvetica Neue">Ключевые слова <mark>выделены</mark>. Чтобы сравнить их с аналогами из филлера, наведите курсор.</p>
 <dl>
   <dt><b><font face="Helvetica Neue">Дети – контрольный</font></b></dt>
     <dd><table cols="2">
       <tbody><tr>
         <td><iframe marginwidth="10" width="200" height="100" frameborder="0" align="left" src="https://www.youtube.com/embed/McORIafx-dc"></iframe></td>
-        <td><p align="justify"><font face="Helvetica Neue">Нам задали в школе <mark>ресёрч</mark> по экологии... Представляешь, у нас в городе 10 пунктов приема макулатуры, а сдавать батарейки — некуда! <mark>Дедлайн</mark> только через неделю, а мы уже отправили презентацию, и до сих пор от Анны Петровны никакого <mark>фидбэка</mark>.</font></p></td>
+        <td><p align="justify"><font face="Helvetica Neue">Нам задали в школе <mark data-tooltip="Сравните с «доклад» в филлере.">ресёрч</mark> по экологии... Представляешь, у нас в городе 10 пунктов приема макулатуры, а сдавать батарейки — некуда! <mark data-tooltip="Сравните с «защита» в филлере.">Дедлайн</mark> только через неделю, а мы уже отправили презентацию, и до сих пор от Анны Петровны никакого <mark data-tooltip="Сравните с «ответа» в филлере.">фидбэка</mark>.</font></p></td>
       </tr>
 </tbody></table></dd>
   <dt><b><font face="Helvetica Neue">Дети – филлер</font></b></dt>
@@ -27,7 +51,7 @@
   <dd><table cols="2">
     <tbody><tr>
       <td><iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" marginwidth="10" width="200" height="100" frameborder="0" align="left" src="https://www.youtube.com/embed/a-Fa9_J4UiA"></iframe></td>
-      <td><p align="justify"><font face="Helvetica Neue">В среду у нас <mark>брифинг</mark>: будем обсуждать бюджет на следующий квартал. А в субботу едем с коллегами на природу, опять этот <mark>тимбилдинг</mark>… Ладно, уже час, <mark>кофе-брейк</mark> кончается, пошли работать.
+      <td><p align="justify"><font face="Helvetica Neue">В среду у нас <mark data-tooltip="Сравните с «совещание» в филлере.">брифинг</mark>: будем обсуждать бюджет на следующий квартал. А в субботу едем с коллегами на природу, опять этот <mark data-tooltip="Сравните с «[эти] мероприятия» в филлере.">тимбилдинг</mark>… Ладно, уже час, <mark data-tooltip="Сравните с «перерыв» в филлере.">кофе-брейк</mark> кончается, пошли работать.
 </font></p></td>
     </tr>
 </tbody></table></dd>
@@ -43,7 +67,7 @@
   <dd><table cols="2">
     <tbody><tr>
       <td><iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" marginwidth="10" width="200" height="100" frameborder="0" align="left" src="https://www.youtube.com/embed/ZtU8k8GJlP0"></iframe></td>
-      <td><p align="justify"><font face="Helvetica Neue">Слушай, тут такой <mark>вебинар</mark> вчера посмотрела про то, как с внуками общаться. Не поверишь!.. <mark>Коуч</mark> – очень интересный молодой человек, педагог-психолог. У самого уже четверо детей. Кстати, пойдёшь завтра на <mark>тренинг</mark> по компьютерной грамотности?
+      <td><p align="justify"><font face="Helvetica Neue">Слушай, тут такой <mark data-tooltip="Сравните с «видео» в филлере.">вебинар</mark> вчера посмотрела про то, как с внуками общаться. Не поверишь!.. <mark data-tooltip="Сравните с «ведущий» в филлере.">Коуч</mark> – очень интересный молодой человек, педагог-психолог. У самого уже четверо детей. Кстати, пойдёшь завтра на <mark data-tooltip="Сравните с «занятие» в филлере.">тренинг</mark> по компьютерной грамотности?
 </font></p></td>
     </tr>
 </tbody></table></dd>
